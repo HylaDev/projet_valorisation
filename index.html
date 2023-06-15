@@ -19,8 +19,14 @@
   <link rel="stylesheet" href="plugins/themefisher-font/style.css">
   <!-- bootstrap.min css -->
   <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,100;1,500&display=swap" rel="stylesheet">
   <!-- Lightbox.min css -->
   <link rel="stylesheet" href="plugins/lightbox2/dist/css/lightbox.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400&display=swap" rel="stylesheet">
   <!-- Slick Carousel -->
   <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
   <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
@@ -72,14 +78,11 @@ Fixed Navigation
             </button>
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-               <li class="nav-item active">
-                  <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
-               </li>
                <li class="nav-item">
                   <a class="nav-link" href="#about">Qui sommes-nous?</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="#volontariat">Volontariat</a>
+                  <a class="nav-link" href="#engager">Pourquoi s'engager?</a>
                </li>
 			   <li class="nav-item">
 				<a class="nav-link" href="#gallerie">Gallerie</a>
@@ -103,7 +106,6 @@ Welcome Slider
 <section class="hero-area">
 	<div class="container">
 		<div class="row">
-			
 			<div class="col-md-6">
 				<div class="block">
 					<br> <br>
@@ -114,7 +116,7 @@ Welcome Slider
 			</div>
 			<div class="col-md-6">
 				<div class="video-player">
-					<img class="img-fluid rounded" src="images/slider/video-player-thumb.jpeg" alt="">
+					<img class="img-fluid rounded" src="images/charity.jpg" alt="">
 					<a class="play-icon" href="javascript:void(0)">
 						<i class="tf-ion-play"  data-video="https://www.youtube.com/embed/g3-VxLQO7do?autoplay=1"></i>
 					</a>
@@ -247,6 +249,18 @@ Start About Section
 	</div>   	<!-- End container -->
 </section>   <!-- End section -->
 
+<section id="engager">
+ <div class="container">
+	<div class="row">
+		<div class="col">
+			<div class="title text-center">
+				<h2>Pourquoi s'engager?</h2>
+				<span class="border"></span>
+			</div>
+		</div>
+	</div>
+ </div>
+</section>
 
 <!-- Start Portfolio Section
 =========================================== -->
@@ -327,8 +341,21 @@ Start About Section
 		</div>
 	</div> <!-- end row -->
 </section>   <!-- End section -->
-					
 
+<section id="remerciements">
+	<div class="container">
+	   <div class="row">
+		   <div class="col">
+			   <div class="title text-center">
+				   <h2>Remerciements</h2>
+				   <span class="border"></span>
+			   </div>
+		   </div>
+	   </div>
+	</div>
+   </section>
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="tf-ion-arrow-up">TOP</i></a>
 
 <footer>
   <div class="footer-bottom ">
@@ -356,6 +383,21 @@ Start About Section
     
     <!-- Custom js -->
     <script src="js/script.js"></script>
+	<script>
+		
+	let backtotop = select('.back-to-top')
+	if (backtotop) {
+	  const toggleBacktotop = () => {
+		if (window.scrollY > 100) {
+		  backtotop.classList.add('active')
+		} else {
+		  backtotop.classList.remove('active')
+		}
+	  }
+	  window.addEventListener('load', toggleBacktotop)
+	  onscroll(document, toggleBacktotop)
+	}
+	</script>
 
   </body>
   </html>
